@@ -1,337 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jaleen Bowens-Kelly Official Portfolio</title>
+    <meta>
+    <title>Ignitro Code Test</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+    </script>
+    <script src="index.js"></script>
 </head>
-    
-<style>
-    
-    body{
-        background: black;
-    }
-    
-    nav{
-        width: 100%;
-        height: 12.5%;
-        background: black;
-        border-bottom: .1em gold solid;
-    }
-    
-    .Nava{
-        width: 99.5%;
-        padding-top : .175%;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-column-gap: 0.026%;
-        height: 40%;
-    }
-    
-    .Navi{
-        background-color: black;
-        width: 100%;
-        border: .0007em gold solid;
-    }
-    
-    article{
-        margin-left: 2em;
-        margin-right: 2em;
-        padding-top: 1.25em;
-    }
-    
-    article div{
-        padding: .075em;
-    }
-    
-    #Mains{
-        background: black;
-    }
-    
-    h1{
-        font: 18px;
-        color: white;
-    }
-    
-    p{
-        font: 9px;
-        color: white;
-    }
-    
-    #CTOP{
-        grid-row: 1fr 1fr;
-        grid-gap: 3.5em;
-        border: none;
-    }
-    
-    #CBELOW {
-	    grid-row: 1fr 1fr;
-        grid-gap: 3.5em;
-        border: none;
-}
 
-    /*This is for the contact buttons!*/
-    
-    #OBUT {
-	    height: 240px;
-        width: 240px;
-        background-image: url(sara-logo.png);
-        background-size: 240px 240px;
-        background-repeat: no-repeat;
-        display: inline-block;
-        border-radius: .0005em;
-        border: gold solid .2em;
-        background-color: goldenrod;
-}
-    
-    #SBUT {
-	    height: 240px;
-        width: 240px;
-        background-image: url(soundcloud.png);
-        background-size: 240px 240px;
-        background-repeat: no-repeat;
-        display: inline-block;
-        border-radius: .0005em;
-        border: gold solid .2em;
-        background-color: goldenrod;
-}
-    
-    #GBUT {
-	    height: 240px;
-        width: 240px;
-        background-image: url(Github.png);
-        background-size: 240px 240px;
-        background-repeat: no-repeat;
-        display: inline-block;
-        border-radius: .0005em;
-        border: gold solid .2em;
-        background-color: goldenrod;
-}   
-    
-    #HBUT {
-	    height: 240px;
-        width: 240px;
-        background-image: url(HackerRank.png);
-        background-size: 240px 240px;
-        background-repeat: no-repeat;
-        display: inline-block;
-        border-radius: .0005em;
-        border: gold solid .2em;
-        background-color: goldenrod;
-}
-    
-    
-    .About p{
-    font-size: 12px;
-}
-    
-    .About h1{
-	font-size: 18px;
-}
-    
-    #About_About {
-    border-radius: .4em;
-	border: gold solid .05em;
-    margin: .5em;
-}
-    
-    #About_About h1{
-        margin-left: 12%;
-        margin-right: 12%;
+<style>
+    body {
+        background: #ffff;
+        font-family: 'Manrope', sans-serif;
     }
     
-    #Experience_About {
-    border-radius: .4em;
-	border: gold solid .05em;
-    margin: .5em;
-}
-    
-    #Experience_About h1{
-        margin-left: 12%;
-        margin-right: 12%;
+    img{
+        width:33%;
     }
     
-    #Visionary_About {
-    border-radius: .4em;
-	border: gold solid .05em;
-    margin: .5em;
-}
-    
-    #Visionary_About h1{
-        margin-left: 12%;
-        margin-right: 12%;
-    }
-    
-    #Programming_About {
-    border-radius: .4em;
-	border: gold solid .05em;
-    margin: .5em;
-}
-    
-    #Programming_About h1{
-        margin-left: 12%;
-        margin-right: 12%;
-    }
-    
-    #Artisan_About {
-    border-radius: .4em;
-	border: gold solid .05em;
-    margin: .5em;
-}
-    
-    #Artisan_About h1{
-        margin-left: 12%;
-        margin-right: 12%;
-    }
-    
-    .Home p{
-        border-bottom: 2px solid goldenrod;
-    }
-    
-    #Frontface{
+    button {
+        color: white;
         border: none;
+        width: 120px;
+        height: 34px;
+        display: inline-block;
+        border-radius: 14px;
     }
     
-    #Front-End img{
-	width: 50%;
-}
-    
-    #Image{
-        width: 90%;
-        border: none;
+    nav {
+        background-image: linear-gradient(#d4dbff, #f3f5ff);
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 1fr 2fr;
     }
     
-    #FF{
-        width: 99%;
-        opacity: .81;
+    #Menu {
+        display: flex;
+        grid-column: 1;
+        grid-row: 1;
+        margin-top: 2.33%;
     }
     
-    footer{
-        height: 12%;
-        border-top: solid gold .1em;
+    #NavInfo {
+        grid-column: 1;
+        margin-left: 10%;
     }
     
-    .contact-form{
-	width: 75%;
-    height: 95%;
-    display: block;
-}
-    
-    
-    @media screen and (max-width: 450px){
-        h1{
-            font: 20px;
-        }    
-        p{
-            font: 12px;
-        }
-        img{
-            max-height: 40%;
-        }
+    #Doggie {
+        grid-row-start: 1;
+        grid-row-end: 4;
+        margin-left: 7.5%;
     }
     
+    #Doggie>img {
+        height: 100%;
+        width: 100%;
+    }
     
+    #Menu>img {
+        width: auto;
+        height: 20%;
+        margin-left: 5%;
+        margin-right: 7%;
+    }
+    
+    #Menu>h3 {
+        padding-left: 2.55%;
+    }
+    
+    .Companies {
+        text-align: center;
+    }
+    
+    #Companieslogo {
+        display: flex;
+        width: 50%;
+        height: auto;
+        margin-left: 8%;
+        margin-right: 3%;
+        text-align: center;
+    }
+    
+    #Companieslogo>img {
+        margin-bottom: 7.5%;
+        margin-left: 10%;
+        margin-top: 5%;
+    }
+    
+    .Services {
+        background-image: linear-gradient(#f3f5ff, #d4dbff);
+        grid-template-columns: 2fr 2fr;
+        grid-template-rows: 1fr 2fr;
+    }
+    
+    #Text {
+        display: flex;
+        margin-left: 15%;
+        margin-right: 15%;
+        padding-top: 10%;
+        padding-bottom: 5%;
+        grid-column: 1;
+    }
+    
+    #Images {
+        grid-row: 2;
+        padding-bottom: 2%;
+        position: sticky;
+        left: 0;
+    }
+    
+    #Images>img {
+        width: 25%;
+        margin-left: 1%
+    }
+    
+    .Two_Column {
+        display: grid;
+        margin: 3%;
+        grid-template-columns: 1fr 2fr;
+    }
+    
+    #TC_Text {
+        grid-column: 1;
+    }
+    
+    #TC_Image {
+        grid-column: 2;
+        background-image: url("images/Two_Column_Image.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 70%;
+    }
+    
+    .fa-check-square {
+        background: -webkit-gradient(linear, left top, left bottom, from(#d4dbff), to(#f3f5ff));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    .fa-ul {
+        padding-top: 7.5%;
+    }
+    
+    .fa-ul>li {
+        padding-bottom: 6.5%;
+    }
+    
+    footer {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        background-image: linear-gradient(#d4dbff, #f3f5ff);
+    }
+    
+    #Footertext {
+        grid-row: 1;
+        grid-column: 1 / 4;
+    }
+    
+    #Footerbutton {
+        grid-row: 2;
+        grid-column: 1 / 4;
+        margin-top: 3%;
+    }
+    
+    #Footerlinks {
+        grid-row: 3;
+        grid-column: 1 / 4;
+        display: flex;
+        justify-content: center;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
 </style>
 
-<body>
+<body style="overflow-x: hidden;">
     <nav>
-        <div class = "Nava" align="center">
-            <button type="button" class="Navi" id="Home"><h1>Home</h1></button>
-            <button type="button" class="Navi" id="About"><h1>About</h1></button>
-            <button type="button" class="Navi" id="Contact"><h1>Contact</h1></button>
-            <button type="button" class="Navi" id="Projects"><h1>Projects</h1></button>
-            <button type="button" class="Navi" id="Blog"><h1>Blog</h1></button>
+        <!---This is a for the text on the top left of the top of the site--->
+        <div id="Menu">
+            <img src="images/Title.png">
+            <h3>About</h3>
+            <h3>Services</h3>
+            <h3>Blog</h3>
+            <h3>Contact</h3>
+        </div>
+        <!---Navigation informational text--->
+        <div id="NavInfo">
+            <h2>Helping contractors get found by the right people</h2>
+            <p>We create valuable conversions to grow your business and take incoming calls off your hands</p>
+            <button style="width: 50%;"></button>
+            <button></button>
+        </div>
+        <!---Image of the dog with the button on top right--->
+        <div id="Doggie">
+            <button style="position: absolute; right: 5%; width: 10%;"></button>
+            <img src="images/Dog_1.png">
         </div>
     </nav>
-    <section id ="Mains">
-        <article>
-            <div class="Home" align="center">
-                <h1>The Offical portfolio of Jaleen Bowens-Kelly</h1>
-                <p>Providing services in these areas:</p>
-                <div id="Frontface">
-                    <figure>
-                            <div id="Front-End">
-                                <img src="HTMLCSSIMAGE.png">
-                                <p>Front End Webdevelopment</p>
-                            </div>
-                            <div id="Game-Development">
-                                
-                                <p>Game Design and Development</p>
-                            </div>
-                            <div>
-                                <p>Music and Art</p>
-                            </div>
-                            <div>
-                                <p>Python Programming</p>
-                            </div>
-                    </figure>
-                </div>
-            </div>
-            <div class="About" align="center">
-                <div id = "About_About">
-                <h1>About</h1>
-                <p>Since I was little, I always enjoyed working with technology. Growing up, I learned a lot about working with technology and it's implementation to modern society. My mission is to become a freelance programmer and independent game developer. Enjoy Philosophy, Programming, Video Games and Technology in general. I am proficient in these programming languages: HTML5, CSS, JQuery, PHP, and Python. While I do prefer Front-End development, I am more than willing to learn Back-End. I am also proficient in photo editing and graphic design. I plan on freelancing my services out to the world, as I have a passion to travel a lot, but is more than willing to work with a client for extended periods of time.</p>
-                <img src="Me_Portfolio.JPG">
-                </div>
-                <div id = "Experience_About">
-                <h1>Experience</h1>
-                <p>I primarily learned from self-teaching myself how to program, using websites like Khan Academy, Youtube, and Sololearn to understand programming. I personally use Brackets and VS Studio to create/edit most of my code that deals with Web Design. My artwork is often 2d pixel art, but I working on branching to 3d modeling. I have completed Sololearn's course on HTML,CSS, Python and JQuery.</p>
-                </div>
-                <div id = "Visionary_About">
-                <h1>Gaming Visionary</h1>
-                <p>I've been creating simple games since 2014 and have learned a lot about what it means to be a game designer, artist, musician, and programmer. I value the creative freedom and technical prowess that creating games bring. I believe that no other medium can tell a story like a good game and this industry will pivotal going into the future. My philosophy is to create games all about passion and creativity that would go on to inspire many, like many of the games of my past. I see gaming as a form of art and should be respected as such by all other mediums of entertainment. I am always ready to learn more about what it means to make a great game and the hard effort that it really is.</p>
-                </div>
-                <div id = "Programming_About">
-                <h1>Programmer</h1>
-                <p>Along with creating games, I also spent a lot of time learning programming. My aim is to become relevant in the future of technology. I want to be involved in the evolution of humanity and technology. I am excited to learn more about what it means to be a programmer and software developer.</p>
-                </div>
-                <div id = "Artisan_About">
-                <h1>Artisan</h1>
-                <p>I always appreciate the nuance that goes into creating art in any medium. I understand the amount of time and dedication it takes to become a great artist, and is constantly working on improving my skills. I work with pixel art, written works, photo editing, video editing, logo design.</p>
-                </div>
-            </div>
-            <div class="contact">
-                <div id="CTOP" align="center"><input id="GBUT" type ="button" onclick="window.location.href = 'https://github.com/Jalki'"  src="Github.png">
-                <input id="SBUT" type="button" onclick="window.location.href = 'https://soundcloud.com/jaleen-bowens-kelly'"  src="SoundCloudLogo.jpg"></div>
-                <div id="CBELOW" align="center"><input id="OBUT" type="button" src ="sara-logo.png" onclick ="window.location.href = 'https://opengameart.org/'">
-                <input id="HBUT" type="button" onclick="window.location.href = 'https://www.hackerrank.com/settings/profile'">
-                </div>  
-            </div>
-            <div class="Projects">
-                <h1>Programming Showcase</h1>
-                            <h1>Python Exponential Population Growth</h1>
-                            <p>A python function that allows user input that continuesly increase the population base on player input. Initial 1.0 version.</p>
-                            <a href="https://github.com/Jalki/Programming-For-The-Month-May-2018-/blob/master/Python%20Exponential%20Population%201.0">Link</a>
-                <h1>Art Showcase</h1>
-                            <h1>Rush B!</h1>
-                            <p>A short instrumental to get you pump to take the next objective!</p>
-                <h1>Games Showcase</h1>
-                            <h1>Coming Soon!</h1>
-            </div>
-            <div class="Blog" align="center">
-                <h1>My Official Blog</h1>
-                <p>A personal Blog dedicated to talking about programming, videogames, and more! It's a great way to learn more about me and what I enjoy doing. Made in Wordpress, it will contain some insight on how I operate.</p>
-                <a href ="jaleenmbkblogs.wordpress.com">Link to my Blog</a>
-            </div>
-        </article>
+
+    <section class="Companies">
+        <p align="center">
+            <b>Helping to Grow the Next Generation of Companies</b>
+        </p>
+        <div id="Companieslogo">
+            <img src="images/HandyMoon.png">
+            <img src="images/Roanoke.png">
+            <img src="images/Eversound.png">
+            <img src="images/Class101.png">
+        </div>
     </section>
-        <footer align="center">
-            <h1>Email me!</h1>
-            <?php
-        <form class="contact-form" action="contact-form.php" method="post">
-            <input type="text" name="name" placeholder="Full Name">
-            <input type="text" name="mail" placeholder="Your e-mail">
-            <input type="text" name="subject" placeholder="Subject">
-            <textarea name="message" placeholder="Message"></textarea>
-            <button type="submit" name="submit">Send Mail</button>
-        </form>
-            ?>
-        </footer>
+
+    <section class="Services">
+        <div id="Text">
+            <h2 style="padding-right: 3%;">Using intuitive marketing to bring in and manage qualified leads.</h2>
+            <p style="padding-left: 3%;">Lorem ipsum dolor sit amet, no dicat mazim tation eam, eu odio adolescens assueverit mea. An quo eligendi copiosae. Nam hinc facilis consequat at. Timeam molestie placerat mei ad.</p>
+        </div>
+        <div id="Images" style="overflow: hidden;">
+            <img src="images/Dog_2.png" style="position: relative; bottom: -45px; padding-bottom: -5%;">
+            <img src="images/Blue_Box.png">
+            <img src="images/Arrows.png" style="width: 5%; height: auto; position: absolute; top: 92%;">
+            <img src="images/Blue_Box.png">
+            <img src="images/Blue_Box.png" style="position: absolute; overflow: hidden;">
+        </div>
+    </section>
+
+    <section class="Two_Column">
+        <div id="TC_Text">
+            <h2 align="justify">Lorem ipsum dolor sit amet no dicat mazim</h2>
+            <p align="justify">Lorem ipsum dolor sit amet, no dicat mazim tation eam, eu odio adolescens assueverit mea. An quo eligendi copiosae. Nam hinc facilis consequat at.</p>
+            <ul class="fa-ul">
+                <li><i class="fa-li fa fa-check-square"></i>Lorem ipsum dolor sit amet</li>
+                <li><i class="fa-li fa fa-check-square"></i>Lorem ipsum dolor sit amet</li>
+                <li><i class="fa-li fa fa-check-square"></i>Lorem ipsum dolor sit amet</li>
+                <li><i class="fa-li fa fa-check-square"></i>Lorem ipsum dolor sit amet</li>
+            </ul>
+        </div>
+        <div id="TC_Image">
+            <!---Div to hold background image!--->
+        </div>
+
+    </section>
+
+    <footer>
+        <div id="Footertext">
+            <h2 align="center">Lorem ipsum dolor sit amet, no dicat mazim tation eam</h2>
+            <p align="center">Lorem ipsum dolor sit amet, no dicat mazim tation eam, eu odio adolescens assueverit. mea an quo eligendi copiosae. Nam hinc facilis consequat at. timeam molestie placerate mei ad.</p>
+        </div>
+        <div id="Footerbutton" align="center">
+            <button style="width: 25%;"></button>
+            <button style="width: 10%;"></button>
+        </div>
+        <div id="Footerlinks" align="center">
+            <span style="padding-top: 15%;">Copyright &copy; 2021 9 Dogs Marketing. All Rights Reserved</span>
+            <img src="images/Dog_3.png" style="vertical-align:middle; padding-left: 2%; padding-right: 2%; padding-top: 2%;">
+            <i class="fa fa-facebook-official" style="font-size:40px; padding: 0.2%; padding-top: 15%;"></i>
+            <i class="fa fa-twitter-square" style="font-size:40px; padding: 0.2%; padding-top: 15%;"></i>
+            <i class="fa fa-linkedin-square" style="font-size:40px; padding: 0.2%; padding-top: 15%;"></i>
+            <i class="fa fa-youtube-play" style="font-size:40px; padding: 0.2%; padding-top: 15%;"></i>
+        </div>
+    </footer>
 </body>
+
 </html>
-<script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous">
-</script>
-<script src="index.js"></script>
