@@ -243,35 +243,74 @@ input, select, textarea {
 
 		}
 
-/* Services Grid */
+/* Services Grid Fix */
 .services-grid {
     display: flex;
     justify-content: center;
+    gap: 2rem;
     flex-wrap: wrap;
-    gap: 2em;
-    margin: 2em 0;
-    max-width: 900px;
+    max-width: 1000px; /* Adjust as needed */
+    margin: 2rem auto;
 }
 
 .service-item {
-    flex: 1;
-    min-width: 200px;
+    flex: 1 1 300px; /* Grow, shrink, basis */
+    min-width: 280px;
+    max-width: 320px;
+    padding: 1.5rem;
     text-align: center;
-    padding: 1.5em;
-    background: rgba(255,255,255,0.05);
-    border-radius: 4px;
     transition: transform 0.3s ease;
 }
 
 .service-item:hover {
     transform: translateY(-5px);
-    background: rgba(255,255,255,0.1);
 }
 
+/* Ensure icons are properly sized */
 .service-item .icon {
-    font-size: 2.5em;
-    margin-bottom: 0.5em;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
     color: #4caf50;
+}
+
+/* Fiverr Button Fix */
+.major.container.medium {
+    position: relative;
+    z-index: 10; /* Higher than project sections */
+    background: rgba(255,255,255,0.05);
+    padding: 2rem;
+    border-radius: 4px;
+}
+
+/* Ensure footer content stays visible */
+#footer {
+    position: relative;
+    z-index: 20;
+    background: #1a1a1a; /* Match your theme */
+    padding-top: 3rem;
+}
+
+/* Button specific styling */
+.actions.special .button {
+    position: relative;
+    z-index: 5;
+    margin: 1rem 0;
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .service-item {
+        max-width: 100%;
+        margin-bottom: 1.5rem;
+    }
+    
+    .major.container.medium {
+        padding: 1.5rem;
+    }
 }
 
 /* Fix for project section height */
